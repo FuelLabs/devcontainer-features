@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # This test file will be executed against one of the scenarios devcontainer.json test that
 # includes no options.
@@ -15,10 +16,11 @@
 #                   --base-image mcr.microsoft.com/devcontainers/base:ubuntu \
 #                   /path/to/this/repo
 
-set -e
-
 # Optional: Import test library bundled with the devcontainer CLI
 source dev-container-features-test-lib
+
+exec which fuelup
+exec which forc
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
