@@ -17,10 +17,17 @@ set -e
 #                   /path/to/this/repo
 
 # Optional: Import test library bundled with the devcontainer CLI
+
+
+echo "Starting test!"
+
 source dev-container-features-test-lib
 
+echo which fuelup
 exec which fuelup
+
 exec which forc
+echo which forc
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
