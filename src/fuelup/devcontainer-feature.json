@@ -1,0 +1,9 @@
+{
+    "name": "Install fuelup",
+    "id": "fuelup",
+    "version": "1.0.0",
+    "description": "Install fuelup",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
