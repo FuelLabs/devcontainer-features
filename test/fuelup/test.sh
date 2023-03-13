@@ -9,7 +9,7 @@
 # This test can be run with the following command:
 #
 #    devcontainer features test \ 
-#                   --features hello   \
+#                   --features fuelup   \
 #                   --remote-user root \
 #                   --skip-scenarios   \
 #                   --base-image mcr.microsoft.com/devcontainers/base:ubuntu \
