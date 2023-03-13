@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -x
 
 # This test file will be executed against one of the scenarios devcontainer.json test that
 # includes no options.
