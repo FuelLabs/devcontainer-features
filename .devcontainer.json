@@ -18,8 +18,17 @@
         }
     },
     "features": {
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers/features/curl:1": {},
         "ghcr.io/devcontainers/features/docker-in-docker:2": {}
     },
+    "overrideFeatureInstallOrder": [
+        "ghcr.io/devcontainers/features/git",
+        "ghcr.io/devcontainers/features/curl"
+    ],
     "remoteUser": "node",
+    "remoteEnv": {
+        "PATH": "${containerEnv:PATH}:${HOME}/.fuelup/bin"
+    },
     "postCreateCommand": "npm install -g @devcontainers/cli"
 }
