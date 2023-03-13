@@ -23,8 +23,8 @@ echo "Starting test!"
 
 source dev-container-features-test-lib
 
-echo ls ~/.fuelup/bin
-LS=`ls ~/.fuelup/bin`
+echo ls $HOME/.fuelup/bin/.fuelup/bin
+LS=`ls $HOME/.fuelup/bin`
 
 echo $LS
 
