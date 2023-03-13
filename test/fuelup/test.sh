@@ -23,11 +23,20 @@ echo "Starting test!"
 
 source dev-container-features-test-lib
 
+echo ls ~/.fuelup/bin
+LS=`ls ~/.fuelup/bin`
+
+echo $LS
+
 echo which fuelup
-exec which fuelup
+FU=`which fuelup`
+
+echo "$FU"
 
 exec which forc
-echo which forc
+FO=`which fuelup`
+
+echo "$FO"
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
