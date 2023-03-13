@@ -4,9 +4,9 @@
 >
 > To provide feedback to the specification, please leave a comment [on spec issue #70](https://github.com/devcontainers/spec/issues/70). For more broad feedback regarding dev container Features, please see [spec issue #61](https://github.com/devcontainers/spec/issues/61).
 
-## Example Contents
+## Contents
 
-This repository contains a _collection_ of two Features - `hello` and `color`. These Features serve as simple feature implementations.  Each sub-section below shows a sample `devcontainer.json` alongside example usage of the Feature.
+This repository contains a _collection_ of one Feature - `fuelup`.
 
 ### `fuelup`
 
@@ -19,10 +19,4 @@ Running `fuelup` inside the built container will install `fuelup` and the `lates
         "ghcr.io/FuelLabs/devcontainer-features/fuelup:1": {}
     }
 }
-```
-
-```bash
-$ hello
-
-Hello, user.
 ```
