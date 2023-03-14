@@ -25,11 +25,11 @@ source dev-container-features-test-lib
 
 echo $PATH
 
-ls $HOME/.fuelup/bin/.fuelup/bin
+ls $HOME/.fuelup/bin/
 
-export PATH="${HOME}/.fuelup/bin:${PATH}"
+# export PATH="${HOME}/.fuelup/bin:${PATH}"
 
-echo $PATH
+# echo $PATH
 
 which fuelup
 which forc
