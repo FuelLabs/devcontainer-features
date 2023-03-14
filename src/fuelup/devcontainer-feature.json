@@ -1,8 +1,22 @@
 {
-    "name": "Install fuelup",
+    "name": "Install Fuel Toolchain",
     "id": "fuelup",
     "version": "1.0.0",
-    "description": "Install fuelup",
+    "description": "Install the Fuel toolchain using fuelup",
+    "options": {
+        "toolchain": {
+            "type": "string",
+            "enum": [
+                "latest",
+                "beta-1",
+                "beta-2",
+                "beta-3",
+                "nightly"
+            ],
+            "default": "latest",
+            "description": "Choose the Fuel toolchain to install."
+        }
+    },
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
     ]
