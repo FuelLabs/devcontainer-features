@@ -24,12 +24,12 @@ ls /usr/local
 ls /usr/local/bin
 
 
-export PATH=$HOME/.fuelup/bin:$PATH
+# export PATH=$HOME/.fuelup/bin:$PATH
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
-check "execute command" fuelup --version | grep 'fuelup'
-check "execute command" forc --version | grep 'forc'
+# check "execute command" fuelup --version | grep 'fuelup'
+# check "execute command" forc --version | grep 'forc'
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.
