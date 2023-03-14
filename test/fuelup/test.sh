@@ -23,6 +23,8 @@ ls $HOME/.fuelup/bin
 
 echo $PATH
 
+export PATH=$HOME/.fuelup/bin:$PATH
+
 fuelup --version
 forc --version
 
