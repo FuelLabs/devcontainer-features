@@ -19,7 +19,10 @@ set -x
 # Optional: Import test library bundled with the devcontainer CLI
 source dev-container-features-test-lib
 
-tree /usr/local
+ls /usr/local
+
+ls /usr/local/bin
+
 
 export PATH=$HOME/.fuelup/bin:$PATH
 
