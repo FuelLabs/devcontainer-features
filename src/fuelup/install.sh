@@ -3,6 +3,11 @@ set -e
 
 echo "Installing fuelup (latest toolchain)"
 
+echo "which apt-get"
+echo $(which apt-get)
+
+echo "apt-get install curl"
+echo $(apt-get install curl)
 
 echo "which curl"
 echo $(which curl)
