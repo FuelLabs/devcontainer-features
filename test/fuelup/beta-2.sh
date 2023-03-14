@@ -21,8 +21,8 @@ source dev-container-features-test-lib
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
-check "execute command" which fuelup | grep '.fuelup/bin/fuelup'
-check "execute command" which forc | grep '.fuelup/bin/fuelup'
+check "execute command" fuelup --version | grep 'fuelup'
+check "execute command" forc --version | grep 'forc'
 check "execute command" fuelup default | grep 'beta-2'
 
 # Report results
