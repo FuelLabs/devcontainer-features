@@ -28,7 +28,7 @@
     ],
     "remoteUser": "node",
     "remoteEnv": {
-        "PATH": "${containerEnv:PATH}:${containerEnv:HOME}/.fuelup/bin"
+        "PATH": "${containerEnv:PATH}:$HOME/.fuelup/bin"
     },
     "postCreateCommand": "npm install -g @devcontainers/cli"
 }
