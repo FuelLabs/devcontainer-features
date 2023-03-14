@@ -18,7 +18,6 @@
         }
     },
     "features": {
-        "ghcr.io/devcontainers/features/git:1": {},
         "ghcr.io/devcontainers/features/docker-in-docker:2": {}
     },
     "remoteUser": "node",
