@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+set -e
 
 # This test file will be executed against one of the scenarios devcontainer.json test that
 # includes no options.
@@ -18,21 +18,7 @@ set -x
 
 # Optional: Import test library bundled with the devcontainer CLI
 
-
-echo "Starting test!"
-
 source dev-container-features-test-lib
-
-echo $PATH
-
-ls $HOME/.fuelup/bin/
-
-# export PATH="${HOME}/.fuelup/bin:${PATH}"
-
-# echo $PATH
-
-which fuelup
-which forc
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
