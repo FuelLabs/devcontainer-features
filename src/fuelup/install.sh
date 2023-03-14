@@ -3,7 +3,6 @@ set -x
 
 echo "Installing fuelup (latest toolchain)"
 
-echo "apt-get install curl"
 apt-get update
 apt-get -qq -y install curl
 apt-get -qq -y install git-all
