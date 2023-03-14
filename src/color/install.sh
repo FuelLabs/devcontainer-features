@@ -4,6 +4,13 @@ set -e
 echo "Activating feature 'color'"
 echo "The provided favorite color is: ${FAVORITE}"
 
+echo "curl --version"
+
+echo $(curl --version)
+
+curl --proto '=https' --tlsv1.2 -sSf https://install.fuel.network/fuelup-init.sh | sh -s -- --no-modify-path
+
+
 
 # The 'install.sh' entrypoint script is always executed as the root user.
 #
