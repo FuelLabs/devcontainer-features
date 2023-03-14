@@ -19,15 +19,6 @@ set -x
 # Optional: Import test library bundled with the devcontainer CLI
 source dev-container-features-test-lib
 
-ls $HOME/.fuelup/bin
-
-echo $PATH
-
-export PATH=$HOME/.fuelup/bin:$PATH
-
-fuelup --version
-forc --version
-
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
 check "execute command" fuelup --version | grep 'fuelup'
