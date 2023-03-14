@@ -7,6 +7,10 @@ which git
 
 which apt-get
 
+ls /usr/bin/
+
+echo $PATH
+
 echo "apt-get install curl"
 apt-get update
 apt-get -qq -y install curl
