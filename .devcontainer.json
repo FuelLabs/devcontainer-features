@@ -24,5 +24,6 @@
     },
     "remoteUser": "node",
     "postCreateCommand": "npm install -g @devcontainers/cli",
-    "postStartCommand": "export PATH=$HOME/.fuelup/bin:$PATH"
+    "onCreateCommand": "export PATH=$HOME/.fuelup/bin:$PATH"
+    
 }
