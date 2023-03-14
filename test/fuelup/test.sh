@@ -17,22 +17,7 @@ set -x
 #                   /path/to/this/repo
 
 # Optional: Import test library bundled with the devcontainer CLI
-
-
-echo "Starting test!"
-
 source dev-container-features-test-lib
-
-echo $PATH
-
-ls $HOME/.fuelup/bin/
-
-# export PATH="${HOME}/.fuelup/bin:${PATH}"
-
-# echo $PATH
-
-which fuelup
-which forc
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
