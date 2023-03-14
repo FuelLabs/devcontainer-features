@@ -8,12 +8,39 @@
             }
         }
     },
+    "beta-1": {
+        "image": "mcr.microsoft.com/devcontainers/base:focal",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+            "fuelup": {
+                "toolchain": "beta-1"
+            }
+        }
+    },
+    "beta-2": {
+        "image": "mcr.microsoft.com/devcontainers/base:focal",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+            "fuelup": {
+                "toolchain": "beta-2"
+            }
+        }
+    },
     "beta-3": {
         "image": "mcr.microsoft.com/devcontainers/base:focal",
         "features": {
             "ghcr.io/devcontainers/features/common-utils:1": {},
             "fuelup": {
                 "toolchain": "beta-3"
+            }
+        }
+    },
+    "nightly": {
+        "image": "mcr.microsoft.com/devcontainers/base:focal",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+            "fuelup": {
+                "toolchain": "nightly"
             }
         }
     }
