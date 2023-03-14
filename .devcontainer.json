@@ -28,10 +28,7 @@
     ],
     "remoteUser": "node",
     "remoteEnv": {
-        "PATH": "/remote:${containerEnv:PATH}"
-    },
-    "containerEnv": {
-        "PATH": "/contain:${containerEnv:PATH}"
+        "PATH": "${containerEnv:PATH}:/some/other/path"
     },
     "postCreateCommand": "npm install -g @devcontainers/cli"
 }
