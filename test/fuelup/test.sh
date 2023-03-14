@@ -19,6 +19,8 @@ set -x
 # Optional: Import test library bundled with the devcontainer CLI
 source dev-container-features-test-lib
 
+echo $PATH
+
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
 check "execute command" fuelup --version | grep 'fuelup'
