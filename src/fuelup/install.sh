@@ -1,5 +1,5 @@
 #!/bin/sh
-set -x
+set -e
 
 echo "Installing fuelup (latest toolchain)"
 
