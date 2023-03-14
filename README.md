@@ -22,9 +22,7 @@ Running `fuelup` inside the built container will install `fuelup` and the specif
 {
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
-        "ghcr.io/FuelLabs/devcontainer-features/fuelup:1": {
-            "toolchain": "latest"
-        }
+        "ghcr.io/FuelLabs/devcontainer-features/fuelup:1": {}
     }
 }
 ```
