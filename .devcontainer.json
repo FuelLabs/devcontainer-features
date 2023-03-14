@@ -27,7 +27,7 @@
         "ghcr.io/devcontainers/features/curl"
     ],
     "remoteUser": "node",
-    "remoteEnv": {
+    "containerEnv": {
         "PATH": "${containerEnv:PATH}:/some/other/path"
     },
     "postCreateCommand": "npm install -g @devcontainers/cli"
