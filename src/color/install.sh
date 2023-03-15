@@ -17,6 +17,9 @@ echo "The effective dev container remoteUser's home directory is '$_REMOTE_USER_
 echo "The effective dev container containerUser is '$_CONTAINER_USER'"
 echo "The effective dev container containerUser's home directory is '$_CONTAINER_USER_HOME'"
 
+echo "The PATH is: ${PATH}"
+echo "The LOCAL_PATH is: ${LOCAL_PATH}"
+
 cat > /usr/local/bin/color \
 << EOF
 #!/bin/sh
