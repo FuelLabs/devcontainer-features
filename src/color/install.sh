@@ -26,6 +26,10 @@ echo "The C_LOCAL_PATH is: ${C_LOCAL_PATH}"
 echo "The C_ENV_PATH is: ${C_ENV_PATH}"
 echo "The C_CONTAINER_PATH is: ${C_CONTAINER_PATH}"
 
+echo "YOUR_ENV_VAR_NAME: ${YOUR_ENV_VAR_NAME}"
+echo "ANOTHER_ENV_VAR_NAME: ${ANOTHER_ENV_VAR_NAME}"
+
+
 cat > /usr/local/bin/color \
 << EOF
 #!/bin/sh

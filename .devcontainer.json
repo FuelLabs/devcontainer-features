@@ -31,6 +31,7 @@
         "C_CONTAINER_PATH": "${containerEnv:PATH}",
         "C_LOCAL_PATH": "${localEnv:PATH}",
         "C_ENV_PATH": "${env:PATH}"
-    },    
+    },
+    "runArgs": ["--env-file","devcontainer.env"],
     "postCreateCommand": "npm install -g @devcontainers/cli"
 }
