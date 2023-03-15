@@ -19,6 +19,8 @@ echo "The effective dev container containerUser's home directory is '$_CONTAINER
 
 echo "The PATH is: ${PATH}"
 echo "The LOCAL_PATH is: ${LOCAL_PATH}"
+echo "The LOCAL_PATH is: ${ENV_PATH}"
+echo "The LOCAL_PATH is: ${CONTAINER_PATH}"
 
 cat > /usr/local/bin/color \
 << EOF
