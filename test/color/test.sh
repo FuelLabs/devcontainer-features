@@ -40,8 +40,13 @@ source dev-container-features-test-lib
 echo "TEST.SH"
 echo "The PATH is: ${PATH}"
 echo "The LOCAL_PATH is: ${LOCAL_PATH}"
-echo "The LOCAL_PATH is: ${ENV_PATH}"
-echo "The LOCAL_PATH is: ${CONTAINER_PATH}"
+echo "The ENV_PATH is: ${ENV_PATH}"
+echo "The CONTAINER_PATH is: ${CONTAINER_PATH}"
+
+echo "The C_LOCAL_PATH is: ${C_LOCAL_PATH}"
+echo "The C_ENV_PATH is: ${C_ENV_PATH}"
+echo "The C_CONTAINER_PATH is: ${C_CONTAINER_PATH}"
+
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib. Syntax is...

@@ -26,6 +26,11 @@
         "CONTAINER_PATH": "${containerEnv:PATH}",
         "LOCAL_PATH": "${localEnv:PATH}",
         "ENV_PATH": "${env:PATH}"
+    },
+    "containerEnv": {
+        "C_CONTAINER_PATH": "${containerEnv:PATH}",
+        "C_LOCAL_PATH": "${localEnv:PATH}",
+        "C_ENV_PATH": "${env:PATH}"
     },    
     "postCreateCommand": "npm install -g @devcontainers/cli"
 }
