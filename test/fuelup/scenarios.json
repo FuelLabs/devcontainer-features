@@ -1,47 +1,94 @@
 {
-    "latest": {
-        "image": "mcr.microsoft.com/devcontainers/base:focal",
+    "default": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "ghcr.io/devcontainers/features/common-utils:1": {},
-            "fuelup": {
-                "toolchain": "latest"
-            }
+            "fuelup": {}
+        },
+        "remoteEnv": { 
+            "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
         }
     },
-    "beta-1": {
-        "image": "mcr.microsoft.com/devcontainers/base:focal",
+    "root": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "ghcr.io/devcontainers/features/common-utils:1": {},
-            "fuelup": {
-                "toolchain": "beta-1"
-            }
-        }
+            "fuelup": {}
+        },
+        "remoteEnv": { 
+            "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
+        },
+        "remoteUser": "root"
     },
-    "beta-2": {
-        "image": "mcr.microsoft.com/devcontainers/base:focal",
+    "vscode": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "ghcr.io/devcontainers/features/common-utils:1": {},
-            "fuelup": {
-                "toolchain": "beta-2"
-            }
-        }
-    },
-    "beta-3": {
-        "image": "mcr.microsoft.com/devcontainers/base:focal",
-        "features": {
-            "ghcr.io/devcontainers/features/common-utils:1": {},
-            "fuelup": {
-                "toolchain": "beta-3"
-            }
-        }
+            "fuelup": {}
+        },
+        "remoteEnv": { 
+            "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
+        },
+        "remoteUser": "vscode"
     },
     "nightly": {
-        "image": "mcr.microsoft.com/devcontainers/base:focal",
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "ghcr.io/devcontainers/features/common-utils:1": {},
             "fuelup": {
                 "toolchain": "nightly"
             }
+        },
+        "remoteEnv": { 
+            "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
+        }
+    },
+    "latest": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+            "fuelup": {
+                "toolchain": "latest"
+            }
+        },
+        "remoteEnv": { 
+            "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
+        }
+    },
+    "beta-1": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+            "fuelup": {
+                "toolchain": "beta-1"
+            }
+        },
+        "remoteEnv": { 
+            "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
+        }
+    },
+    "beta-2": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+            "fuelup": {
+                "toolchain": "beta-2"
+            }
+        },
+        "remoteEnv": { 
+            "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
+        }
+    },
+    "beta-3": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+            "fuelup": {
+                "toolchain": "beta-3"
+            }
+        },
+        "remoteEnv": { 
+            "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
         }
     }
 }
