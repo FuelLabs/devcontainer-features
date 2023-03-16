@@ -4,9 +4,6 @@
         "features": {
             "ghcr.io/devcontainers/features/common-utils:1": {},
             "fuelup": {}
-        },
-        "remoteEnv": { 
-            "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
         }
     },
     "root": {
@@ -15,9 +12,6 @@
             "ghcr.io/devcontainers/features/common-utils:1": {},
             "fuelup": {}
         },
-        "remoteEnv": { 
-            "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
-        },
         "remoteUser": "root"
     },
     "vscode": {
@@ -25,9 +19,6 @@
         "features": {
             "ghcr.io/devcontainers/features/common-utils:1": {},
             "fuelup": {}
-        },
-        "remoteEnv": { 
-            "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
         },
         "remoteUser": "vscode"
     },
@@ -38,9 +29,6 @@
             "fuelup": {
                 "toolchain": "nightly"
             }
-        },
-        "remoteEnv": { 
-            "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
         }
     },
     "latest": {
@@ -50,9 +38,6 @@
             "fuelup": {
                 "toolchain": "latest"
             }
-        },
-        "remoteEnv": { 
-            "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
         }
     },
     "beta-1": {
@@ -62,9 +47,6 @@
             "fuelup": {
                 "toolchain": "beta-1"
             }
-        },
-        "remoteEnv": { 
-            "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
         }
     },
     "beta-2": {
@@ -74,9 +56,6 @@
             "fuelup": {
                 "toolchain": "beta-2"
             }
-        },
-        "remoteEnv": { 
-            "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
         }
     },
     "beta-3": {
@@ -86,9 +65,6 @@
             "fuelup": {
                 "toolchain": "beta-3"
             }
-        },
-        "remoteEnv": { 
-            "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
         }
     }
 }

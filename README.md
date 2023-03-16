@@ -18,16 +18,11 @@ Running `fuelup` inside the built container will install `fuelup` and the specif
 - beta-3
 - nightly
 
-For convience, it's recommended to add the .fuelup directory to the remote user's path in the config:
-
 ```jsonc
 {
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
         "ghcr.io/FuelLabs/devcontainer-features/fuelup:1": {}
-    },
-    "remoteEnv": { 
-        "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
     }
 }
 ```
@@ -41,9 +36,6 @@ is equivalent to:
         "ghcr.io/FuelLabs/devcontainer-features/fuelup:1": {
             "toolchain": "latest"
         }
-    },
-    "remoteEnv": { 
-        "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
     }
 }
 ```

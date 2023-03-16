@@ -21,9 +21,6 @@
         "ghcr.io/devcontainers/features/common-utils:1": {},
         "ghcr.io/devcontainers/features/docker-in-docker:2": {}
     },
-    "remoteEnv": { 
-        "PATH": "${containerEnv:PATH}:~/.fuelup/bin"
-    },
     "remoteUser": "node",
     "postCreateCommand": "npm install -g @devcontainers/cli"
 }

@@ -24,10 +24,6 @@ set -e
 # Provides the 'check' and 'reportResults' commands.
 source dev-container-features-test-lib
 
-# Add the fuelup bin directory to the PATH, since this is not being done in the default
-# devcontainer.json.
-export PATH=$HOME/.fuelup/bin:$PATH
-
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
 check "execute command" fuelup --version | grep 'fuelup'
