@@ -19,8 +19,10 @@
     },
     "features": {
         "ghcr.io/devcontainers/features/git:1": {},
-        "ghcr.io/devcontainers/features/curl:1": {},
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+        "ghcr.io/devcontainers/features/curl:1": {}
+    },
+    "remoteEnv": { 
+        "SOME_VARIABLE": "/some/other/path" 
     },
     "remoteUser": "node",
     "postCreateCommand": "npm install -g @devcontainers/cli"    

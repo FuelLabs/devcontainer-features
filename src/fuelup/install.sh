@@ -7,6 +7,8 @@ echo "Installing fuelup with provided toolchain: ${TOOLCHAIN}"
 export DEBIAN_FRONTEND=noninteractive
 export TZ=Etc/UTC
 
+echo "SOME_VARIABLE: ${SOME_VARIABLE}"
+
 # Install curl and git. Unfortunately the devcontainer features don't seem to work, so we
 # have to install them manually.
 apt-get update

@@ -19,6 +19,9 @@ set -x
 # Optional: Import test library bundled with the devcontainer CLI
 source dev-container-features-test-lib
 
+echo "SOME_VARIABLE: ${SOME_VARIABLE}"
+
+
 export PATH=$HOME/.fuelup/bin:$PATH
 
 # Feature-specific tests
