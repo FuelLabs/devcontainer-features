@@ -25,5 +25,5 @@
         "SOME_VARIABLE": "/some/other/path" 
     },
     "remoteUser": "node",
-    "postCreateCommand": "npm install -g @devcontainers/cli"    
+    "postCreateCommand": "npm install -g @devcontainers/cli && export SOME_VARIABLE=/some/other/path/two"    
 }
