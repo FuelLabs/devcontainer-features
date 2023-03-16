@@ -1,0 +1,70 @@
+{
+    "default": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+            "fuelup": {}
+        }
+    },
+    "root": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+            "fuelup": {}
+        },
+        "remoteUser": "root"
+    },
+    "vscode": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+            "fuelup": {}
+        },
+        "remoteUser": "vscode"
+    },
+    "nightly": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+            "fuelup": {
+                "toolchain": "nightly"
+            }
+        }
+    },
+    "latest": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+            "fuelup": {
+                "toolchain": "latest"
+            }
+        }
+    },
+    "beta-1": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+            "fuelup": {
+                "toolchain": "beta-1"
+            }
+        }
+    },
+    "beta-2": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+            "fuelup": {
+                "toolchain": "beta-2"
+            }
+        }
+    },
+    "beta-3": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+            "fuelup": {
+                "toolchain": "beta-3"
+            }
+        }
+    }
+}
