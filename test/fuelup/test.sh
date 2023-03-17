@@ -18,19 +18,16 @@
 #               --base-image mcr.microsoft.com/devcontainers/base:ubuntu \
 #               /path/to/this/repo
 
-set -x
+set -e
 
 # Optional: Import test library bundled with the devcontainer CLI
 # Provides the 'check' and 'reportResults' commands.
 source dev-container-features-test-lib
 
-echo $PATH
-ls ~/.fuelup/bin
-
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
-check "execute command" fuelup --version | grep -E 'fuelup (\d+\.)+\d+'
-check "execute command" forc --version | grep -E 'forc (\d+\.)+\d+'
+check "execute command" fuelup --version | grep 'fuelup [0-9].'
+check "execute command" forc --version | grep 'forc [0-9].'
 check "execute command" fuelup default | grep 'latest'
 
 # Report result
