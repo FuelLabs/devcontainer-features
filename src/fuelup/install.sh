@@ -1,19 +1,33 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 echo "Installing fuelup with provided toolchain: ${TOOLCHAIN}"
 
 export DEBIAN_FRONTEND=noninteractive
-export PATH=$HOME/.fuelup/bin:$PATH
+export FUELUP_HOME=$HOME/.fuelup
+export REMOTE_FUELUP_HOME=$_REMOTE_USER_HOME/.fuelup
+export PATH=$FUELUP_HOME/bin:$PATH
 
 if [ "$(id -u)" -ne 0 ]; then
     echo -e 'Script must be run as root. Use sudo, su, or add "USER root" to your Dockerfile before running this script.'
     exit 1
 fi
 
-# Add fuelup the the path for all new login shells.
-echo "export PATH=\$PATH:\$HOME/.fuelup/bin" > /etc/profile.d/00-fuelup.sh
-chmod +x /etc/profile.d/00-fuelup.sh
+# Ensure that login shells get the correct path if the user updated the PATH using ENV.
+rm -f /etc/profile.d/00-restore-env.sh
+echo "export PATH=${PATH//$(sh -lc 'echo $PATH')/\$PATH}" > /etc/profile.d/00-restore-env.sh
+chmod +x /etc/profile.d/00-restore-env.sh
+
+# Updates bashrc and zshrc files with the given string if not already present.
+updaterc() {
+    echo "Updating /etc/bash.bashrc and /etc/zsh/zshrc..."
+    if [[ "$(cat /etc/bash.bashrc)" != *"$1"* ]]; then
+        echo -e "$1" >> /etc/bash.bashrc
+    fi
+    if [ -f "/etc/zsh/zshrc" ] && [[ "$(cat /etc/zsh/zshrc)" != *"$1"* ]]; then
+        echo -e "$1" >> /etc/zsh/zshrc
+    fi
+}
 
 # Updates apt-get if the cache is empty.
 apt_get_update()
@@ -33,7 +47,7 @@ check_packages() {
 }
 
 # Install required packages to build if missing.
-check_packages curl git-all sudo
+check_packages curl git-all
 
 # Install fuelup.
 curl --proto '=https' --tlsv1.2 -sSf https://install.fuel.network/fuelup-init.sh | sh -s -- --no-modify-path
@@ -45,11 +59,20 @@ if [ "${TOOLCHAIN}" != "latest" ]; then
     fuelup default ${TOOLCHAIN}
 fi
 
-# If the remote user is a different user, copy the fuelup directory to the remote user's home.
-if [ "$HOME" != "$_REMOTE_USER_HOME" ]; then
-    sudo cp -r $HOME/.fuelup $_REMOTE_USER_HOME/.fuelup
-fi
-
 # Ensure fuelup and forc are installed.
 fuelup --version
 forc --version
+
+# If the remote user is a different user, copy the fuelup directory to the remote user's home.
+if [ "$HOME" != "$_REMOTE_USER_HOME" ]; then
+    mv $FUELUP_HOME $REMOTE_FUELUP_HOME
+    chmod 775 -R $REMOTE_FUELUP_HOME
+    chown -R $_REMOTE_USER:$_REMOTE_USER $REMOTE_FUELUP_HOME
+fi
+
+# Add FUELUP_HOME and bin directory into bashrc/zshrc files.
+updaterc "$(cat << EOF
+export FUELUP_HOME="${REMOTE_FUELUP_HOME}"
+if [[ "\${PATH}" != *"\${FUELUP_HOME}/bin"* ]]; then export PATH="\${FUELUP_HOME}/bin:\${PATH}"; fi
+EOF
+)"

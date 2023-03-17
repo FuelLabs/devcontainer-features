@@ -18,8 +18,8 @@ set -e
 source dev-container-features-test-lib
 
 # Feature-specific tests
-check "execute command" fuelup --version | grep 'fuelup'
-check "execute command" forc --version | grep 'forc'
+check "execute command" fuelup --version | grep 'fuelup [0-9].'
+check "execute command" forc --version | grep 'forc [0-9].'
 check "execute command" fuelup default | grep 'latest'
 
 # If any of the checks above exited with a non-zero exit code, the test will fail.
