@@ -18,11 +18,14 @@
 #               --base-image mcr.microsoft.com/devcontainers/base:ubuntu \
 #               /path/to/this/repo
 
-set -e
+set -x
 
 # Optional: Import test library bundled with the devcontainer CLI
 # Provides the 'check' and 'reportResults' commands.
 source dev-container-features-test-lib
+
+echo $PATH
+ls ~/.fuelup/bin
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
