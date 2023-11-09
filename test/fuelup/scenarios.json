@@ -66,5 +66,14 @@
                 "toolchain": "beta-3"
             }
         }
+    },
+    "beta-4": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+            "fuelup": {
+                "toolchain": "beta-4"
+            }
+        }
     }
 }

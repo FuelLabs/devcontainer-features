@@ -12,6 +12,7 @@ Running `fuelup` inside the built container will install `fuelup` and the specif
 - beta-1
 - beta-2
 - beta-3
+- beta-4
 - nightly
 
 ```jsonc
